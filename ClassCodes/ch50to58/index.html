@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p style="color: red;" id="one" class="one two three four">Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, officia.</> 
+    <a href="#"><em onclick="getMore();">Click to see more</em></a> </!-->
+
+    <form>
+      ZIP: <br />
+      <input type="text" name="zip" id="zip" onblur="fillCity();" /> <br />
+      City: <br />
+      <input type="text" name="city" id="city" />
+    </form>
+
+    <p id="loris">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto,
+      harum!
+      <a> <em onclick="expandLoris();" id="seeMore">Click to see more</em></a>
+    </p>
+
+    <p class="one two" id="one">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores,
+      nemo.
+    </p>
+
+
+
+    <img src="../IMG20180628125331.jpg" alt="" onmouseout="swapImageDown();" onmouseover="swapImageUp();" id="myImage">
+
+    <script>
+      function fillCity() {
+        var cityCode;
+        var zip = document.getElementById("zip").value;
+        switch (zip) {
+          case "60600":
+            cityCode = "Karachi";
+            break;
+          case "66060":
+            cityCode = "Multan";
+            break;
+          case "60066":
+            cityCode = "Lahore";
+            break;
+          default:
+            break;
+        }
+        document.getElementById("city").value = cityCode;
+      }
+
+      function expandLoris() {
+        var para = document.getElementById("loris");
+        var text = para.innerText;
+        var html =
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi reprehenderit necessitatibus voluptatibus nemo saepe deserunt ea fugiat dolorum aspernatur minus voluptatem dolores, eos repudiandae architecto similique totam tempora facilis! Nemo? <a> <em id='seeMore' onclick='showLess();'>show less</em></a>";
+        para.innerHTML = html;
+      }
+      function showLess() {
+        var para = document.getElementById("loris");
+        var text =
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, harum! <a> <em onclick='expandLoris();' id='seeMore'>Click to see more</em></a>";
+        para.innerHTML = text;
+      }
+      var list = document.getElementById("one").classList;
+      console.log(document.getElementById("one").classList);
+      for (let i = 0; i < list.length; i++) {
+          const element = list[i];
+          console.log(element);
+          
+      }
+      document.getElementById("one").classList += " three"; 
+      console.log(document.getElementById("one").classList);
+      for (let i = 0; i < list.length; i++) {
+          const element = list[i];
+          console.log(element);
+          
+      }
+
+      function swapImageDown() {
+          var image = document.getElementById("myImage");
+          image.src = "../kits.jpg"
+      }
+      function swapImageUp() {
+          var image = document.getElementById("myImage");
+          image.src = "../IMG20180628125331.jpg"
+      }
+      function incFont() {
+          var para = document.getElementsByTagName("p");
+          for (let i = 0; i < para.length; i++) {
+              const element = para[i];
+              element.style.fontSize = "2rem";
+          }
+      }
+
+      function theName(name) {
+        this.name = name ;
+      }
+      var varName = new theName("Arif");
+      console.log(varName.name);
+    //   incFont();
+
+
+      //    console.log(document.getElementById("one").classList);
+
+      //    var list = document.getElementById("one").classList
+      //    for (let i = 0; i < list.length; i++) {
+      //        const element = list[i];
+      //        console.log(element)
+      //    }
+      //    console.log(document.getElementById("one").style)
+      // function getMore() {
+      //     var content = "new lorem20Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, officiaLorem ipsum, dolor sit amet consectetur adipisicing elit. At, officia"
+      // var para = document.getElementById("one");
+      // var old = para.innerText;
+      // para.innerHTML = content;
+      // console.log(old)
+      // }
+    </script>
+  </body>
+</html>

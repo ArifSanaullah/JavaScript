@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Objects in review</h1>
+
+    <script>
+      //   var plan1 = {
+      //     name: "Basic",
+      //     price: 3.99,
+      //     space: 100,
+      //     transfer: 1000,
+      //     pages: 10,
+      //     discountMonths: [6, 7],
+      //     calcAnnual: function(discPercent) {
+      //       var bestPrice = this.price;
+      //       var currDate = new Date();
+      //       var currMo = currDate.getMonth();
+      //       for (var i = 0; i < this.discountMonths.length; i++) {
+      //         if (this.discountMonths[i] == currMo) {
+      //           bsetPirce = this.price * discPercent;
+      //           break;
+      //         }
+      //       }
+      //       return bestPrice * 12;
+      //     }
+      //   };
+
+      //   var annualPrice = plan1.calcAnnual(0.85)
+      //   console.log(annualPrice);
+
+      function Plan(name, price, space, transfer, pages, discountMonths) {
+        this.name = name;
+        this.price = price;
+        this.space = space;
+        this.transfer = transfer;
+        this.pages = pages;
+        this.discountMonths = discountMonths;
+      }
+      Plan.prototype.calcAnnual = function(discPercent) {
+        var bestPrice = this.price;
+        var currDate = new Date();
+        var currMo = currDate.getMonth();
+        for (var i = 0; i < this.discountMonths.length; i++) {
+          if (this.discountMonths[i] === currMo) {
+            bestPrice = this.price * discPercent;
+            break;
+          }
+        }
+        return bestPrice * 12;
+      };
+      Plan.prototype.cancellable = true;
+      var plan1 = new Plan("Basic", 3.99, 1000, 5000, 10, [6, 7, 11]);
+      var plan2 = new Plan("Gold", 6.99, 2000, 8000, 15, [6, 7, 8, 12]);
+      plan2.cancellable = false;
+      console.log(plan1);
+      console.log(plan2.cancellable);
+      console.log(plan1.hasOwnProperty('cancellable'));
+    </script>
+  </body>
+</html>

@@ -7,9 +7,34 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Objects in review</h1>
-
+    <div id="mydiv">
+    <h1 class="myh1" style="color: blue;">Objects in review</h1>
+    </div>
     <script>
+
+      var table = 2;
+      var limit = 5;
+      for (var i = 1; i<=limit; i++) {
+        var oldV = table * i;
+        var newV = oldV + table;
+        // console.log(newV)
+        if (i==1) {
+          console.log(oldV, "one")
+        }
+         else if (i != 1 && i  != limit) {
+          console.log(newV, "three");
+        }else if(i == limit) {
+          console.log(oldV, "Two")
+        }
+      }
+      // var mydiv = document.querySelector("#mydiv");
+      // var oldh1 = mydiv.getElementsByClassName("myh1")[0];
+      // mydiv.addEventListener("mouseover", function () {
+        // console.log(mydiv, oldh1);
+      //   oldh1.style.color = "red";
+
+        
+      // }, true, );
       //   var plan1 = {
       //     name: "Basic",
       //     price: 3.99,
@@ -34,33 +59,33 @@
       //   var annualPrice = plan1.calcAnnual(0.85)
       //   console.log(annualPrice);
 
-      function Plan(name, price, space, transfer, pages, discountMonths) {
-        this.name = name;
-        this.price = price;
-        this.space = space;
-        this.transfer = transfer;
-        this.pages = pages;
-        this.discountMonths = discountMonths;
-      }
-      Plan.prototype.calcAnnual = function(discPercent) {
-        var bestPrice = this.price;
-        var currDate = new Date();
-        var currMo = currDate.getMonth();
-        for (var i = 0; i < this.discountMonths.length; i++) {
-          if (this.discountMonths[i] === currMo) {
-            bestPrice = this.price * discPercent;
-            break;
-          }
-        }
-        return bestPrice * 12;
-      };
-      Plan.prototype.cancellable = true;
-      var plan1 = new Plan("Basic", 3.99, 1000, 5000, 10, [6, 7, 11]);
-      var plan2 = new Plan("Gold", 6.99, 2000, 8000, 15, [6, 7, 8, 12]);
-      plan2.cancellable = false;
-      console.log(plan1);
-      console.log(plan2.cancellable);
-      console.log(plan1.hasOwnProperty('cancellable'));
+      // function Plan(name, price, space, transfer, pages, discountMonths) {
+      //   this.name = name;
+      //   this.price = price;
+      //   this.space = space;
+      //   this.transfer = transfer;
+      //   this.pages = pages;
+      //   this.discountMonths = discountMonths;
+      // }
+      // Plan.prototype.calcAnnual = function(discPercent) {
+      //   var bestPrice = this.price;
+      //   var currDate = new Date();
+      //   var currMo = currDate.getMonth();
+      //   for (var i = 0; i < this.discountMonths.length; i++) {
+      //     if (this.discountMonths[i] === currMo) {
+      //       bestPrice = this.price * discPercent;
+      //       break;
+      //     }
+      //   }
+      //   return bestPrice * 12;
+      // };
+      // Plan.prototype.cancellable = true;
+      // var plan1 = new Plan("Basic", 3.99, 1000, 5000, 10, [6, 7, 11]);
+      // var plan2 = new Plan("Gold", 6.99, 2000, 8000, 15, [6, 7, 8, 12]);
+      // plan2.cancellable = false;
+      // console.log(plan1);
+      // console.log(plan2.cancellable);
+      // console.log(plan1.hasOwnProperty('cancellable'));
     </script>
   </body>
 </html>

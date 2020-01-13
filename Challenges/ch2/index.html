@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="button" value="Add Row" onclick="addRow('dataTable')" />
+
+    <input type="button" value="Delete Row" onclick="deleteRow('dataTable')" /> -->
+
+    <!-- <table id="dataTable" width="350px" border="1">
+      <tr id="tRow">
+        <td><input type="checkbox" name="chk" /></td>
+        <td><input type="text" name="txt" /></td>
+        <td>
+          <select name="city">
+            <option value="mn">Multan</option>
+            <option value="le">Lahore</option>
+            <option value="qa">Quetta</option>
+            <option value="ki">Karachi</option>
+            <option value="pr">Pishawar</option>
+          </select>
+        </td>
+      </tr>
+    </table> -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gendre</th>
+        </tr>
+      </thead>
+
+      <tr class="one">
+        <td>Abid</td>
+        <td>22</td>
+        <td>Male</td>
+        <td><button class="delRow" onclick="delRow('one');">Delete Row</button></td>
+      </tr>
+      <tr class="two">
+        <td>farhan</td>
+        <td>24</td>
+        <td>Male</td>
+        <td><button class="delRow" onclick="delRow('two');">Delete Row</button></td>
+      </tr>
+      <tr class="three">
+        <td>Arif</td>
+        <td>21</td>
+        <td>Male</td>
+        <td><button id="delRow" onclick="delRow('three');">Delete Row</button></td>
+      </tr>
+    </table>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+        .p1 {
+            font-size: 1em;
+            margin: 10px;
+        }
+        .p2 {
+            font-size: 2em;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" onclick="console.log('Hi...!')">Click</a>    
+    <img id="myImage" src="./cold-coffee.jpg" alt="Image" onmouseover="ChangeImg();" onmouseout="src='./cold-coffee.jpg'">
+    <input type="text" id="myP" onfocus="ChangeBG();" onblur="this.style.backgroundColor = 'white'">
+
+    <form action="">
+        Email: 
+        <input type="text" name="email" id="email">
+        <input type="button" value="Submit" onclick="Validate('email');">
+        <br>
+        Zip: <br> <input type="text" id="zip" onblur="fillCity();"> <br>
+        <br>
+        <input type="text" id="city">
+    </form>
+
+    <p id="loris" class="p1" onmouseover="bigFont();">Slow lorises are a group of several species of strepsirrhine primates which make up the genus
+Nycticebus. <a href="#" onclick="expandLoris();">Show more</a></p>
+
+    <script src="./app.js"></script>
+</body>
+</html>

@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Header</h1>
+    <!-- <h1>Header</h1>
     <ul>
       <li>One</li>
       <li>Two</li>
@@ -15,9 +15,49 @@
     </ul>
     <button id="myButton">
       Click me
-    </button>
-    <script src="./ch1to.js" type="text/javascript">
+    </button> -->
+
+    <!-- <form id="field" onsubmit="mail();">
+      <h1>Submission Form</h1>
+      <label>First Name</label>
+      <input type="text" id="text1" />
+      <br />
+      <br />
+      <label>Last Name</label>
+      <input type="text" id="text2" />
+      <br />
+      <br />
+      <label>Email Address</label>
+      <input type="email" id="text3" />
+      <br />
+      <br />
+      <input type="submit" value="submit" onclick="myfunc();" />
+    </form>
+    <script>
       // don't write javascript in html files
+      function myfunc() {
+      var form = document.getElementById("field");
+      var formInputs = form.getElementsByTagName("input");
+        for (var i = 0; i < formInputs.length; i++) {
+          if (formInputs[i].value == "") {
+            alert("input can't be empty");
+          }
+        }
+      }
+    </script> -->
+
+    <div id="div5">
+      <p>Chicago</p>
+    <button>Submi Button</button>
+      <p>Kansas City</p>
+      <p>St. Louis</p>
+    </div>
+
+    <script>
+      var parent = document.getElementById("div5");
+      var target = parent.childNodes[1];
+      var nTextContent = target.nodeValue;
+      console.log(parent.childNodes[3].nodeValue); 
     </script>
   </body>
 </html>

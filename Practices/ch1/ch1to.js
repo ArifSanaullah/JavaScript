@@ -22,20 +22,20 @@
 // else {
 //     alert("Wrong")
 // }
-var word = prompt("enter letter")
-var array = ["a", "b", "c", "d", "e", "f"];
+// var word = prompt("enter letter")
+// var array = ["a", "b", "c", "d", "e", "f"];
 // console.log(typeof(array[1]));
-for (let i = 0; i < array.length; i++) {
-  const element = array[i];
-  if (word === element) {
-    alert("true")
-    break;
-  }
-  else {
-    alert("false");
-    break;
-  }
-}
+// for (let i = 0; i < array.length; i++) {
+//   const element = array[i];
+//   if (word === element) {
+//     alert("true")
+//     break;
+//   }
+//   else {
+//     alert("false");
+//     break;
+//   }
+// }
 // var weight = prompt("enter your weight");
 // var time = prompt("enter your time");
 // var gednre = prompt("enter your gendre");
@@ -702,3 +702,7 @@ for (let i = 0; i < array.length; i++) {
 //     clickHandler("hi from iffe");
 //   });
 // })();
+
+
+
+

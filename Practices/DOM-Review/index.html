@@ -1,21 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+<html>
+  <head>
+    <title>Simple Document</title>
+  </head>
+  <body>
+    <!-- <div>This is comment
+      <p> 
+        There's not much to this.
+      </p>
+      <p id="two">This is <em>Importan</em>
+      
+      </p>
+    </div>
     <script>
     
-        const user1 = {name: "arif", age: 30};
-        const user2 = user1;
-        console.log("One:",user1, "Two:", user2);
-        user1.age = 20;
-        console.log("One: ",user1, "Two: ", user2);
-        
+      var p = document.getElementById("two");
+      console.log(p.childNodes);
     
+    </script> -->
+    <div class="humpty">
+      <!-- This is comment -->
+      <p>Lorem ipsum d</p> 
+      <p>Lorem ipsum dolo</p>
+      <p>Lorem ipsum dolor si</p>
+      <a href="#" onmouseover="ChgClr();" name="Arif" id="link">Link</a>
+      <div>Div</div>
+      <!-- <img src="./cold-coffee.jpg" value="Hello" id="image" alt=""> -->
+    </div>
+
+    <script>
+      var div = document.querySelector(".humpty");
+      // for (var i = 0; i < div.childNodes.length; i++) {
+      //   if (div.childNodes[i].nodeType == 1) {
+      //     div.childNodes[i].innerHTML = "Hello world";
+      //   } else if (div.childNodes[i].nodeType == 3) {
+      //     // console.log(div.childNodes[i]);
+      //   }
+      //   console.log(div.childNodes[i].nodeName, div.childNodes[i].nodeType)
+      // }
+      // console.log(document.getElementById("image").src)
+      // console.log(div.firstElementChild.firstChild.nodeValue)
+      // for (var i=0; i<div.childNodes.length; i++) {
+      //   console.log(div.childNodes[i], div.childNodes[i].nodeType, div.childNodes[i].nodeName);
+      // }
+      var link =document.getElementById("link");
+        for (var i=0; i<link.attributes.length; i++) {
+          console.log(link.attributes[i].nodeType, link.attributes[i].nodeName)
+        }
     </script>
-</body>
+  </body>
 </html>

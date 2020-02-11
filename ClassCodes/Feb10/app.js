@@ -106,8 +106,8 @@
 //     console.log("There is a problem: ", e.message);
 // }
 
-try {
-    throw "Test try catch error"
-} catch (e) {
-    console.log(e);
-}
+// try {
+//     throw "Test try catch error"
+// } catch (e) {
+//     console.log(e);
+// }

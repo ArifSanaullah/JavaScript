@@ -146,3 +146,37 @@
 
 // let objValues = Object.values(obj);
 // console.log(objValues);
+
+// FOR-OF-LOOP
+
+// const myObj = { fname: "Arif", lname: "Sanaullah", age: 00 };
+// for (let i = 0; i < 3; i++) {
+//     const element = myObj[i];
+//     console.log(element);
+// }
+
+// for (const key in myObj) {
+//     if (myObj.hasOwnProperty(key)) {
+//         const element = myObj[key];
+//         console.log(element);
+//     }
+// }
+
+// const myArray = ["Arif", "Sanaullah", 00];
+// for (const key in myArray) {
+//     if (myArray.hasOwnProperty(key)) {
+//         const element = myArray[key];
+//         console.log(element);
+//     }
+// }
+
+// localStorage.setItem("name", "Arif");
+// localStorage.setItem("s/o", "Sanaullah");
+// localStorage.setItem("age", "34");
+
+// let { name, ...storage } = localStorage;
+// console.log(localStorage.getItem("name"));
+
+// sessionStorage.setItem("name", "Arif");
+// sessionStorage.setItem("s/o", "Sanaullah");
+// sessionStorage.setItem("age", "34");

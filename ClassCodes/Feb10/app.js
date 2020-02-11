@@ -111,3 +111,14 @@
 // } catch (e) {
 //     console.log(e);
 // }
+
+// SHORT-CICRUIT EVALUATION && ||
+
+// change gender value to see different results
+const gender = "male";
+
+let msg = (gender === "male") && "AND short-circuit";
+console.log(msg);
+
+msg = (gender === "female") || "OR short-circuit";
+console.log(msg);

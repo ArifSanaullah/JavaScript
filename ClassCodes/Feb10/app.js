@@ -115,10 +115,34 @@
 // SHORT-CICRUIT EVALUATION && ||
 
 // change gender value to see different results
-const gender = "male";
+// const gender = "male";
 
-let msg = (gender === "male") && "AND short-circuit";
-console.log(msg);
+// let msg = (gender === "male") && "AND short-circuit";
+// console.log(msg);
 
-msg = (gender === "female") || "OR short-circuit";
-console.log(msg);
+// msg = (gender === "female") || "OR short-circuit";
+// console.log(msg);
+
+
+// OBJECT.KEYS()
+
+// const obj = {
+//     fname: "Arif",
+//     lname: "Sanaullah",
+//     age: 20
+// }
+
+// let objKeys = Object.keys(obj);
+// console.log(objKeys);
+
+
+// OBJECT.VALUES()
+
+// const obj = {
+//     fname: "Arif",
+//     lname: "Sanaullah",
+//     age: 20
+// }
+
+// let objValues = Object.values(obj);
+// console.log(objValues);

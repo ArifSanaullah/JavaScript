@@ -96,3 +96,18 @@
 
 // result.then(resultFromNewPromise).then(resolveFunction).catch(rejectFunction);
 // console.log("Hello world");
+
+
+// TRY-CATCH-THROW
+
+// try {
+//     console.lo("Hello"); //spelling mistake to generate error
+// } catch (e) {
+//     console.log("There is a problem: ", e.message);
+// }
+
+try {
+    throw "Test try catch error"
+} catch (e) {
+    console.log(e);
+}

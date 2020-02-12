@@ -14,22 +14,14 @@
 
 
 function duplicateEncode(word) {
-    let result = {};
-    [...word].map(letter => {
-        letter = letter.toLowerCase();
-        letter in result ? result[letter] += 1 : result[letter] = 1;
-    });
-    result = Object.values(result);
-    result = result.map(n => n > 1 ? ")".repeat(n) : "(").join("");
-    return result;
+    word = word.toLowerCase();
+    let resultObj = {};
+    [...word].map(letter => letter in resultObj ? resultObj[letter] += 1 : resultObj[letter] = 1);
+    let resultArr = [...word].map(letter => resultObj[[letter]] > 1 ? ")" : "(").join("")
+    return resultArr;
 }
 
 console.log(duplicateEncode("Success"));
 console.log(duplicateEncode("din"));
 console.log(duplicateEncode("recede"));
 console.log(duplicateEncode("(( @"));
-
-// input => "Success", expected output => ")())())", obtained output => )))())(
-// input => "din", expected output => "(((", obtained output => (((
-// input => "recede", expected output => "()()()", obtained output => ()))((
-// input => "(( @",  expected output => "))((", obtained output => ))((
